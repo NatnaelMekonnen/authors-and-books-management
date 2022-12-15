@@ -5,12 +5,12 @@ const Book = gql`
 
   input BookInput {
     title: String!
-    author: Author!
+    author: String!
   }
 
   input UpdateBookInput {
     title: String
-    author: Author
+    author: String
   }
 
   # Type ##################
@@ -22,7 +22,7 @@ const Book = gql`
     author: Author
   }
 
-  type BookList implements MetaData {
+  type BookList {
     books: [Book]
     total: Int
     limit: Int
